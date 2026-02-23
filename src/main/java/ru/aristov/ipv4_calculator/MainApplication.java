@@ -15,18 +15,17 @@ public class MainApplication extends Application {
         FXMLLoader root = new FXMLLoader(getClass().getResource("IPCalculator-view.fxml"));
 
         Scene scene = new Scene(root.load());
-        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("style.css")).toExternalForm());
+        scene.getStylesheets()
+                .add(Objects.requireNonNull(getClass().getResource("style.css")).toExternalForm());
 
-        stage.getIcons().add(new Image(String.valueOf(Objects.requireNonNull(getClass().getResource("images/icon-calculator.png")))));
+        stage.getIcons()
+                .add(new Image(String.valueOf(Objects.requireNonNull(getClass()
+                        .getResource("images/icon-calculator.png")))));
         stage.setTitle("IPv4 Calculator");
         stage.setScene(scene);
         stage.centerOnScreen();
         stage.setResizable(false);
         stage.show();
-    }
-
-    public static void main(String[] args) {
-        launch();
     }
 
     public static String arrayToString(int[] arr) {
